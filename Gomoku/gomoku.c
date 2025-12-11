@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 void Setboard(char [15][15]); // 보드 판 설정 
 void prt(char [15][15]); // 현황 출력 
@@ -8,6 +9,9 @@ int win_check(char [15][15]); // 승리 조건 확인
 int game_over(char [15][15], int); // 게임 오버 시 
 
 int main(void) {
+
+	SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
 	int check = 0; 
     char board[15][15];
